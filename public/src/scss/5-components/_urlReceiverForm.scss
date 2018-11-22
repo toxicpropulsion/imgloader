@@ -1,0 +1,40 @@
+#urlRecieverForm {
+  width: 460px;
+  height: auto;
+  margin-top: 40vh;
+  transition: all 600ms ease;
+  text-transform: lowercase;
+
+  &.submitted {
+    margin-top: 5vh;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .url-input {
+      width: 100%;
+      color: $brand-gray;
+      height: 44px;
+      margin: 0;
+      padding: 8px 12px;
+      border: none;
+      text-align: center;
+      font-size: 1.2rem;
+      background: transparent;
+      border-bottom: 2px solid $brand-gray;
+      transition: all 600ms ease;
+      opacity: 0.5;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Block paddings classes
+@mixin padding-top($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .padding-top-#{$i*5} {
+      padding-top: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block paddings classes
+@mixin padding-right($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .padding-right-#{$i*5} {
+      padding-right: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block paddings classes
+@mixin padding-bottom($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .padding-bottom-#{$i*5} {
+      padding-bottom: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block paddings classes
+@mixin padding-left($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .padding-left-#{$i*5} {
+      padding-left: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block margin classes
+@mixin margin-top($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .margin-top-#{$i*5} {
+      margin-top: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block margin classes
+@mixin margin-right($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .margin-right-#{$i*5} {
+      margin-right: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block margin classes
+@mixin margin-bottom($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .margin-bottom-#{$i*5} {
+      margin-bottom: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Block margin classes
+@mixin margin-left($start: 1, $end: 10) {
+  @for $i from $start through $end {
+    .margin-left-#{$i*5} {
+      margin-left: floor($i * 5px) !important;
+    }
+  }
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  // Internet Explorer 10+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  // Safari and Chrome
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Font smoothing
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Appearance
+@mixin roboto-condensed(
+  $style: normal,
+  $size: 16px,
+  $color: $black-color,
+  $weight: 300
+) {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+// Backface visibility
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  backface-visibility: $value;
+}
+// User select
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+// Appearance
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// Unstyled list
+@mixin list-unstyled {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+// Provides an easy way to include a clearfix for containing floats.
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+// Display flex
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
