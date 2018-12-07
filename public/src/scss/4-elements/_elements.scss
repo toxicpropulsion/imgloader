@@ -2,6 +2,10 @@ body {
   background-color: $brand-white;
 }
 
+input[type="text"] {
+  @include roboto-condensed();
+}
+
 *::-webkit-input-placeholder {
   color: $brand-gray;
   text-transform: lowercase;

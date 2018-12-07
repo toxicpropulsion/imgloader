@@ -97,14 +97,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Appearance
 @mixin roboto-condensed(
   $style: normal,
-  $size: 16px,
-  $color: $black-color,
-  $weight: 300
+  $size: 1rem,
+  $color: $brand-black,
+  $weight: 400
 ) {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $fontRobotoCondesed;
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
