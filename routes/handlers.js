@@ -11,13 +11,15 @@ module.exports.indexGetHandler = function(req, res) {
 module.exports.indexPostHandler = function(req, res) {
   let { url } = req.body;
   let links = [];
-  let protocol = urlParser.parse(url).protocol;
-  let hostname = urlParser.parse(url).hostname;
+  let urlIsValid = validateURL(url);
 
-  if (!validateURL(url)) {
+  if (!urlIsValid) {
     res.status(400).end();
     return false;
   }
+
+  let protocol = urlParser.parse(url).protocol;
+  let hostname = urlParser.parse(url).hostname;
 
   const q = tress(function(url, done) {
     needle.get(url, function(err, res) {
