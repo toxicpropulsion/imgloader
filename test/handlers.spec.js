@@ -5,7 +5,7 @@ const { indexGetHandler } = require("../routes/handlers");
 app.get("/", indexGetHandler);
 
 describe("GET /", function() {
-  it("respond with status 200", function(done) {
+  it("should respond with status 200", function(done) {
     request(app)
       .get("/")
       .expect(200, done);
