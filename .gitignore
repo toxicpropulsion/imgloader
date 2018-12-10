@@ -1,4 +1,12 @@
+# npm
 node_modules
+
+# tools
 .vscode
 
+# logs
+logs/
+*.log
+
+# other
 wtf.js
