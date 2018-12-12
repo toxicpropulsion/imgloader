@@ -27,8 +27,8 @@ module.exports.logger = createLogger({
   level: "info",
   format: combine(timestamp(), loggerFormat),
   transports: [
-    new transports.File({ filename: "logs/combined.log" }),
-    new transports.File({ filename: "logs/error.log", level: "error" }),
+    new transports.File({ filename: "combined.log" }),
+    new transports.File({ filename: "error.log", level: "error" }),
     new transports.Console({
       format: combine(timestamp(), colorize(), loggerFormat)
     })
