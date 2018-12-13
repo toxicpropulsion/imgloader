@@ -15,7 +15,9 @@
     "express": "latest",
     "needle": "^1.0.0",
     "pug": "^2.0.3",
+    "puppeteer": "^1.11.0",
     "request": "latest",
+    "shortid": "^2.2.14",
     "tress": "^1.0.0",
     "winston": "^3.1.0"
   },
