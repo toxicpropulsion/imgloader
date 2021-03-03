@@ -14,7 +14,7 @@
     "dotenv": "^6.1.0",
     "express": "latest",
     "needle": "^1.0.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "request": "latest",
     "tress": "^1.0.0",
     "winston": "^3.2.1"
